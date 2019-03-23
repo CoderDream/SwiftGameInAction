@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041F2EA119EFB9CD003E8016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F2EA019EFB9CD003E8016 /* AppDelegate.swift */; };
+		041F2EA319EFB9CD003E8016 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F2EA219EFB9CD003E8016 /* ViewController.swift */; };
+		041F2EA619EFB9CD003E8016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EA419EFB9CD003E8016 /* Main.storyboard */; };
+		041F2EA819EFB9CD003E8016 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EA719EFB9CD003E8016 /* Images.xcassets */; };
+		041F2EAB19EFB9CD003E8016 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EA919EFB9CD003E8016 /* LaunchScreen.xib */; };
+		041F2EB719EFB9CD003E8016 /* Simon_Memory_GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F2EB619EFB9CD003E8016 /* Simon_Memory_GameTests.swift */; };
+		041F2ECD19EFBA0E003E8016 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EC019EFBA0E003E8016 /* background.png */; };
+		041F2ECE19EFBA0E003E8016 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EC119EFBA0E003E8016 /* blue.png */; };
+		041F2ED019EFBA0E003E8016 /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EC319EFBA0E003E8016 /* empty.png */; };
+		041F2ED119EFBA0E003E8016 /* Energy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EC419EFBA0E003E8016 /* Energy.wav */; };
+		041F2ED219EFBA0E003E8016 /* error.wav in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EC519EFBA0E003E8016 /* error.wav */; };
+		041F2ED319EFBA0E003E8016 /* gameboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EC619EFBA0E003E8016 /* gameboard.png */; };
+		041F2ED419EFBA0E003E8016 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EC719EFBA0E003E8016 /* green.png */; };
+		041F2ED619EFBA0E003E8016 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F2EC919EFBA0E003E8016 /* logo.png */; };
+		041F2ED719EFBA0E003E8016 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 041F2ECA19EFBA0E003E8016 /* music.mp3 */; };
+		041F2ED819EFBA0E003E8016 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 041F2ECB19EFBA0E003E8016 /* red.png */; };
+		041F2EDB19EFBBA2003E8016 /* SimonGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F2EDA19EFBBA2003E8016 /* SimonGameViewController.swift */; };
+		044B626819F896820055ADB8 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 044B626719F896820055ADB8 /* yellow.png */; };
+		045F6AF519F7B0CE00E51E34 /* blue.wav in Resources */ = {isa = PBXBuildFile; fileRef = 045F6AF419F7B0CE00E51E34 /* blue.wav */; };
+		045F6AF719F7B0D400E51E34 /* green.wav in Resources */ = {isa = PBXBuildFile; fileRef = 045F6AF619F7B0D400E51E34 /* green.wav */; };
+		045F6AFB19F7B0E300E51E34 /* yellow.wav in Resources */ = {isa = PBXBuildFile; fileRef = 045F6AFA19F7B0E300E51E34 /* yellow.wav */; };
+		045F6AFD19F7B79F00E51E34 /* red.wav in Resources */ = {isa = PBXBuildFile; fileRef = 045F6AFC19F7B79F00E51E34 /* red.wav */; };
+		045F6AFF19F7B7FC00E51E34 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045F6AFE19F7B7FC00E51E34 /* AVFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		041F2EB119EFB9CD003E8016 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 041F2E9319EFB9CD003E8016 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 041F2E9A19EFB9CD003E8016;
+			remoteInfo = "Simon Memory Game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041F2E9B19EFB9CD003E8016 /* Simon Memory Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simon Memory Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		041F2E9F19EFB9CD003E8016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041F2EA019EFB9CD003E8016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		041F2EA219EFB9CD003E8016 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		041F2EA519EFB9CD003E8016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		041F2EA719EFB9CD003E8016 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		041F2EAA19EFB9CD003E8016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		041F2EB019EFB9CD003E8016 /* Simon Memory GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simon Memory GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		041F2EB519EFB9CD003E8016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041F2EB619EFB9CD003E8016 /* Simon_Memory_GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simon_Memory_GameTests.swift; sourceTree = "<group>"; };
+		041F2EC019EFBA0E003E8016 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = SOURCE_ROOT; };
+		041F2EC119EFBA0E003E8016 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = SOURCE_ROOT; };
+		041F2EC319EFBA0E003E8016 /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = SOURCE_ROOT; };
+		041F2EC419EFBA0E003E8016 /* Energy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Energy.wav; sourceTree = SOURCE_ROOT; };
+		041F2EC519EFBA0E003E8016 /* error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = error.wav; sourceTree = SOURCE_ROOT; };
+		041F2EC619EFBA0E003E8016 /* gameboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameboard.png; sourceTree = SOURCE_ROOT; };
+		041F2EC719EFBA0E003E8016 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = SOURCE_ROOT; };
+		041F2EC919EFBA0E003E8016 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = SOURCE_ROOT; };
+		041F2ECA19EFBA0E003E8016 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = SOURCE_ROOT; };
+		041F2ECB19EFBA0E003E8016 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = SOURCE_ROOT; };
+		041F2EDA19EFBBA2003E8016 /* SimonGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimonGameViewController.swift; sourceTree = "<group>"; };
+		044B626719F896820055ADB8 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = SOURCE_ROOT; };
+		045F6AF419F7B0CE00E51E34 /* blue.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blue.wav; sourceTree = SOURCE_ROOT; };
+		045F6AF619F7B0D400E51E34 /* green.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = green.wav; sourceTree = SOURCE_ROOT; };
+		045F6AFA19F7B0E300E51E34 /* yellow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yellow.wav; sourceTree = SOURCE_ROOT; };
+		045F6AFC19F7B79F00E51E34 /* red.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = red.wav; sourceTree = SOURCE_ROOT; };
+		045F6AFE19F7B7FC00E51E34 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		041F2E9819EFB9CD003E8016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045F6AFF19F7B7FC00E51E34 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F2EAD19EFB9CD003E8016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		041F2E9219EFB9CD003E8016 = {
+			isa = PBXGroup;
+			children = (
+				045F6AFE19F7B7FC00E51E34 /* AVFoundation.framework */,
+				041F2E9D19EFB9CD003E8016 /* Simon Memory Game */,
+				041F2EB319EFB9CD003E8016 /* Simon Memory GameTests */,
+				041F2E9C19EFB9CD003E8016 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		041F2E9C19EFB9CD003E8016 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				041F2E9B19EFB9CD003E8016 /* Simon Memory Game.app */,
+				041F2EB019EFB9CD003E8016 /* Simon Memory GameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		041F2E9D19EFB9CD003E8016 /* Simon Memory Game */ = {
+			isa = PBXGroup;
+			children = (
+				041F2EA019EFB9CD003E8016 /* AppDelegate.swift */,
+				041F2EA219EFB9CD003E8016 /* ViewController.swift */,
+				041F2EA419EFB9CD003E8016 /* Main.storyboard */,
+				041F2EDA19EFBBA2003E8016 /* SimonGameViewController.swift */,
+				041F2EA719EFB9CD003E8016 /* Images.xcassets */,
+				041F2EA919EFB9CD003E8016 /* LaunchScreen.xib */,
+				041F2E9E19EFB9CD003E8016 /* Supporting Files */,
+			);
+			path = "Simon Memory Game";
+			sourceTree = "<group>";
+		};
+		041F2E9E19EFB9CD003E8016 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				045F6AFC19F7B79F00E51E34 /* red.wav */,
+				045F6AFA19F7B0E300E51E34 /* yellow.wav */,
+				045F6AF619F7B0D400E51E34 /* green.wav */,
+				045F6AF419F7B0CE00E51E34 /* blue.wav */,
+				041F2EC019EFBA0E003E8016 /* background.png */,
+				041F2EC319EFBA0E003E8016 /* empty.png */,
+				041F2EC419EFBA0E003E8016 /* Energy.wav */,
+				041F2EC519EFBA0E003E8016 /* error.wav */,
+				041F2EC619EFBA0E003E8016 /* gameboard.png */,
+				041F2EC719EFBA0E003E8016 /* green.png */,
+				044B626719F896820055ADB8 /* yellow.png */,
+				041F2ECB19EFBA0E003E8016 /* red.png */,
+				041F2EC119EFBA0E003E8016 /* blue.png */,
+				041F2EC919EFBA0E003E8016 /* logo.png */,
+				041F2ECA19EFBA0E003E8016 /* music.mp3 */,
+				041F2E9F19EFB9CD003E8016 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		041F2EB319EFB9CD003E8016 /* Simon Memory GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				041F2EB619EFB9CD003E8016 /* Simon_Memory_GameTests.swift */,
+				041F2EB419EFB9CD003E8016 /* Supporting Files */,
+			);
+			path = "Simon Memory GameTests";
+			sourceTree = "<group>";
+		};
+		041F2EB419EFB9CD003E8016 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				041F2EB519EFB9CD003E8016 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		041F2E9A19EFB9CD003E8016 /* Simon Memory Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041F2EBA19EFB9CD003E8016 /* Build configuration list for PBXNativeTarget "Simon Memory Game" */;
+			buildPhases = (
+				041F2E9719EFB9CD003E8016 /* Sources */,
+				041F2E9819EFB9CD003E8016 /* Frameworks */,
+				041F2E9919EFB9CD003E8016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simon Memory Game";
+			productName = "Simon Memory Game";
+			productReference = 041F2E9B19EFB9CD003E8016 /* Simon Memory Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		041F2EAF19EFB9CD003E8016 /* Simon Memory GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 041F2EBD19EFB9CD003E8016 /* Build configuration list for PBXNativeTarget "Simon Memory GameTests" */;
+			buildPhases = (
+				041F2EAC19EFB9CD003E8016 /* Sources */,
+				041F2EAD19EFB9CD003E8016 /* Frameworks */,
+				041F2EAE19EFB9CD003E8016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				041F2EB219EFB9CD003E8016 /* PBXTargetDependency */,
+			);
+			name = "Simon Memory GameTests";
+			productName = "Simon Memory GameTests";
+			productReference = 041F2EB019EFB9CD003E8016 /* Simon Memory GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		041F2E9319EFB9CD003E8016 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Mac;
+				TargetAttributes = {
+					041F2E9A19EFB9CD003E8016 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					041F2EAF19EFB9CD003E8016 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 041F2E9A19EFB9CD003E8016;
+					};
+				};
+			};
+			buildConfigurationList = 041F2E9619EFB9CD003E8016 /* Build configuration list for PBXProject "Simon Memory Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 041F2E9219EFB9CD003E8016;
+			productRefGroup = 041F2E9C19EFB9CD003E8016 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				041F2E9A19EFB9CD003E8016 /* Simon Memory Game */,
+				041F2EAF19EFB9CD003E8016 /* Simon Memory GameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		041F2E9919EFB9CD003E8016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045F6AF519F7B0CE00E51E34 /* blue.wav in Resources */,
+				044B626819F896820055ADB8 /* yellow.png in Resources */,
+				041F2ED619EFBA0E003E8016 /* logo.png in Resources */,
+				041F2ED119EFBA0E003E8016 /* Energy.wav in Resources */,
+				045F6AF719F7B0D400E51E34 /* green.wav in Resources */,
+				045F6AFD19F7B79F00E51E34 /* red.wav in Resources */,
+				041F2ED419EFBA0E003E8016 /* green.png in Resources */,
+				041F2ED819EFBA0E003E8016 /* red.png in Resources */,
+				041F2ED319EFBA0E003E8016 /* gameboard.png in Resources */,
+				041F2EA619EFB9CD003E8016 /* Main.storyboard in Resources */,
+				041F2ECE19EFBA0E003E8016 /* blue.png in Resources */,
+				041F2ECD19EFBA0E003E8016 /* background.png in Resources */,
+				041F2ED219EFBA0E003E8016 /* error.wav in Resources */,
+				041F2ED019EFBA0E003E8016 /* empty.png in Resources */,
+				041F2EAB19EFB9CD003E8016 /* LaunchScreen.xib in Resources */,
+				041F2ED719EFBA0E003E8016 /* music.mp3 in Resources */,
+				045F6AFB19F7B0E300E51E34 /* yellow.wav in Resources */,
+				041F2EA819EFB9CD003E8016 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F2EAE19EFB9CD003E8016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		041F2E9719EFB9CD003E8016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041F2EDB19EFBBA2003E8016 /* SimonGameViewController.swift in Sources */,
+				041F2EA319EFB9CD003E8016 /* ViewController.swift in Sources */,
+				041F2EA119EFB9CD003E8016 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		041F2EAC19EFB9CD003E8016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				041F2EB719EFB9CD003E8016 /* Simon_Memory_GameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		041F2EB219EFB9CD003E8016 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 041F2E9A19EFB9CD003E8016 /* Simon Memory Game */;
+			targetProxy = 041F2EB119EFB9CD003E8016 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		041F2EA419EFB9CD003E8016 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041F2EA519EFB9CD003E8016 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		041F2EA919EFB9CD003E8016 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041F2EAA19EFB9CD003E8016 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		041F2EB819EFB9CD003E8016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		041F2EB919EFB9CD003E8016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		041F2EBB19EFB9CD003E8016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Simon Memory Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		041F2EBC19EFB9CD003E8016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Simon Memory Game/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		041F2EBE19EFB9CD003E8016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Simon Memory GameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simon Memory Game.app/Simon Memory Game";
+			};
+			name = Debug;
+		};
+		041F2EBF19EFB9CD003E8016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Simon Memory GameTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simon Memory Game.app/Simon Memory Game";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		041F2E9619EFB9CD003E8016 /* Build configuration list for PBXProject "Simon Memory Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041F2EB819EFB9CD003E8016 /* Debug */,
+				041F2EB919EFB9CD003E8016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041F2EBA19EFB9CD003E8016 /* Build configuration list for PBXNativeTarget "Simon Memory Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041F2EBB19EFB9CD003E8016 /* Debug */,
+				041F2EBC19EFB9CD003E8016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		041F2EBD19EFB9CD003E8016 /* Build configuration list for PBXNativeTarget "Simon Memory GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				041F2EBE19EFB9CD003E8016 /* Debug */,
+				041F2EBF19EFB9CD003E8016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 041F2E9319EFB9CD003E8016 /* Project object */;
+}
