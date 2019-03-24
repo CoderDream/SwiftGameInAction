@@ -1,7 +1,8 @@
 
 sender.setImage(tileImage, for: UIControl.State.normal)
 
-
+                                <string key="text">Users can continuously flip the card over. When two consecutive cards, like when you automatically eliminate; otherwise, these two cards will be re-Flip back.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
 @IBAction func tileClick(_ sender: UIButton) {
         // 判断轻拍的按钮是否禁用
         if isDisabled {
