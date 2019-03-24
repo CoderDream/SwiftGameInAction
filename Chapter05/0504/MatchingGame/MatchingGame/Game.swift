@@ -79,12 +79,5 @@ class GameSceneViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func tileClick(_ sender: UIButton) {
-        // 获取轻拍按钮的 tag
-        let senderID: Int =  sender.tag
-        print("senderID: \(senderID)")
-        
-        let tileImage: UIImage = self.tiles[senderID]
-        sender.setImage(tileImage, for: UIControl.State.normal)        
-    }
+
 }
