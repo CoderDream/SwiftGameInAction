@@ -36,7 +36,7 @@ class GameViewController: UIViewController {
     @objc func movePlayerLeft() {
         // 判断飞船是否超出边界
         if self.playerRect.origin.x >= 10 {
-            self.playerRect.offsetBy(dx: -3, dy: 0)
+            self.playerRect = self.playerRect.offsetBy(dx: -3, dy: 0)
             self.playerView.frame = self.playerRect
         }
     }
@@ -49,8 +49,9 @@ class GameViewController: UIViewController {
     
     @objc func movePlayerRight() {
         // 判断飞船是否超出边界
-        if self.playerRect.origin.x <= 290 {
-            self.playerRect.offsetBy(dx: 3, dy: 0)
+        if self.playerRect.origin.x <= 340 {
+            print("move right x: \(self.playerRect.origin.x)")
+            self.playerRect = self.playerRect.offsetBy(dx: 3, dy: 0)
             self.playerView.frame = self.playerRect
         }
     }
