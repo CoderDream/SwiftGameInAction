@@ -20,6 +20,9 @@ class Enemy: NSObject {
     
     // 移动敌人
     var enemyTimer: Timer = Timer()
+    
+    var enemyBulletTimer: Timer = Timer()
+    
     var minXPos: NSInteger = 0
     var maxXPos: NSInteger = 0
     var goingLeft :Bool = false
@@ -55,6 +58,7 @@ class Enemy: NSObject {
         }
         
         self.enemyTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(moveEnemies), userInfo: nil, repeats: true)
+        self.enemyBulletTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(dropBomb), userInfo: nil, repeats: true)
     }
     
     @objc func moveEnemies(){
@@ -81,5 +85,10 @@ class Enemy: NSObject {
             enemyView.frame = CGRect(x: xPos, y: Int(enemyView.frame.origin.y), width: eSize, height: eSize)
             self.gameView.addSubview(enemyView)
         }
+    }
+    
+    @objc func dropBomb(){
+        let newBullet: EnemyBullet = EnemyBullet()
+        newBullet.fireBullet(gameView: self.gameView, enemyList: self.enemyList)
     }
 }

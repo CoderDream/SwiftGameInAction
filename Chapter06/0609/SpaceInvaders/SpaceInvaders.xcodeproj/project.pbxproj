@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F320D2C224A47CC005A8CCD /* EnemyBullet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320D2B224A47CC005A8CCD /* EnemyBullet.swift */; };
 		3F5545042249156500EABEC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5545032249156500EABEC8 /* AppDelegate.swift */; };
 		3F5545062249156500EABEC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5545052249156500EABEC8 /* ViewController.swift */; };
 		3F5545092249156500EABEC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5545072249156500EABEC8 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F320D2B224A47CC005A8CCD /* EnemyBullet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyBullet.swift; sourceTree = "<group>"; };
 		3F5545002249156500EABEC8 /* SpaceInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F5545032249156500EABEC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F5545052249156500EABEC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				3F55451522491A6900EABEC8 /* Game.swift */,
 				3F55451722492F3600EABEC8 /* Enemy.swift */,
 				3FF39A752249B852006ADE81 /* PlayerBullet.swift */,
+				3F320D2B224A47CC005A8CCD /* EnemyBullet.swift */,
 				3F5545072249156500EABEC8 /* Main.storyboard */,
 				3F55450A2249156800EABEC8 /* Assets.xcassets */,
 				3F55450C2249156800EABEC8 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F320D2C224A47CC005A8CCD /* EnemyBullet.swift in Sources */,
 				3F55451822492F3600EABEC8 /* Enemy.swift in Sources */,
 				3FF39A762249B852006ADE81 /* PlayerBullet.swift in Sources */,
 				3F5545062249156500EABEC8 /* ViewController.swift in Sources */,
