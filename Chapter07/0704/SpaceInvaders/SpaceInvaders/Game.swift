@@ -18,6 +18,8 @@ class GameViewController: UIViewController {
     
     var moveTimer: Timer? = Timer()
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // 设置飞船的图像

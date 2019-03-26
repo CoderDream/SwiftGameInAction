@@ -135,6 +135,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ces-1z-BaW"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="PwO-MF-yWz" id="Dy6-V0-bgw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQE-e6-C6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
