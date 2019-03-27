@@ -12,9 +12,14 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    var playerImage: UIImage =  UIImage(named: "ship.png")!
+    // var playerImage: UIImage =  UIImage(named: "ship.png")!
     var playerRect: CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
-    var playerView: UIImageView = UIImageView()
+    var playerView: UIView = UIView()
+    //var moveTimer:NSTimer?=NSTimer()
+    //var collisionTimer:NSTimer?=NSTimer()
+    // 实现飞船的对象
+    var playerOne: PlayerObject = PlayerObject()
+    //var playerView: UIImageView = UIImageView()
     
     var moveTimer: Timer? = Timer()
     
@@ -36,16 +41,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         self.changeState(newState: .INITIALIZING)
-        
-//        // 设置飞船的图像
-//        self.playerView.image = self.playerImage
-//        self.playerRect = CGRect(x: 50, y: 400, width: 64, height: 64)
-//        self.playerView.frame = self.playerRect
-//        self.view.addSubview(self.playerView)
-//
-//        // 添加敌人
-//        let enemy: Enemy = Enemy()
-//        enemy.initEnemies(gameView: self.view)
+
     }
     
     @IBAction func moveLeft(_ sender: UIButton) {
@@ -86,8 +82,8 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func fireBtnClick(_ sender: UIButton) {
-        let fire: PlayerBullet = PlayerBullet()
-        fire.fireBullet(gameView: self.view, playerView: self.playerView)
+        //let fire: PlayerBullet = PlayerBullet()
+        //fire.fireBullet(gameView: self.view, playerView: self.playerView)
     }
     
     func changeState(newState: GAME_STATE){
@@ -106,17 +102,13 @@ class GameViewController: UIViewController {
             
         case .ENDING:
             break
-       // default:
-//            var alert=UIAlertView()
-//            alert.title="Integer out of range"
-//            alert.addButtonWithTitle("Cancel")
-//            alert.show()
-           // print("default")
         }
     }
     
     func loadingScreen(){
         print("loadingScreen")
+        playerOne = PlayerObject().initPlayer(gameView: self.view)
+        self.playerView = self.playerOne.getPlayerView()
         // 添加提示界面
         self.loadingView.image = UIImage(named: "loading.png")
         self.loadingView.frame = self.view.frame
