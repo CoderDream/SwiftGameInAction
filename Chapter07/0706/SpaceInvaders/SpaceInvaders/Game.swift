@@ -19,6 +19,8 @@ class GameViewController: UIViewController {
     //var collisionTimer:NSTimer?=NSTimer()
     // 实现飞船的对象
     var playerOne: PlayerObject = PlayerObject()
+    // 子弹对象
+    var playerBullet: PlayerBullet = PlayerBullet()
     //var playerView: UIImageView = UIImageView()
     
     var moveTimer: Timer? = Timer()
@@ -73,8 +75,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func fireBtnClick(_ sender: UIButton) {
-        //let fire: PlayerBullet = PlayerBullet()
-        //fire.fireBullet(gameView: self.view, playerView: self.playerView)
+        playerBullet.fireBullet(gameView: self.view, playerView: self.playerView as! UIImageView)
     }
     
     func changeState(newState: GAME_STATE){
