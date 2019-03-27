@@ -41,36 +41,27 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         self.changeState(newState: .INITIALIZING)
-
+        self.changeState(newState: .PLAYING)
     }
     
     @IBAction func moveLeft(_ sender: UIButton) {
         print("moveLeft")
         self.releaseTouch()
-        moveTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(GameViewController.movePlayerLeft), userInfo: nil, repeats: true)
-    }
-    
-    @objc func movePlayerLeft() {
-        // 判断飞船是否超出边界
-        if self.playerRect.origin.x >= 10 {
-            self.playerRect = self.playerRect.offsetBy(dx: -3, dy: 0)
-            self.playerView.frame = self.playerRect
+        if self.currentState != .PLAYING {
+            return
         }
+        // 注意这里的 target 为 self.playOne
+        moveTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self.playerOne, selector: #selector(PlayerObject.movePlayerLeft), userInfo: nil, repeats: true)
     }
     
     @IBAction func moveRight(_ sender: UIButton) {
         print("moveRight")
         self.releaseTouch()
-        moveTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(GameViewController.movePlayerRight), userInfo: nil, repeats: true)
-    }
-    
-    @objc func movePlayerRight() {
-        // 判断飞船是否超出边界
-        if self.playerRect.origin.x <= 340 {
-            print("move right x: \(self.playerRect.origin.x)")
-            self.playerRect = self.playerRect.offsetBy(dx: 3, dy: 0)
-            self.playerView.frame = self.playerRect
+        if self.currentState != .PLAYING {
+            return
         }
+        // 注意这里的 target 为 self.playOne
+        moveTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self.playerOne, selector: #selector(PlayerObject.movePlayerRight), userInfo: nil, repeats: true)
     }
     
     func releaseTouch() {
