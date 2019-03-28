@@ -45,11 +45,13 @@ class PlayerBullet: NSObject {
     }
     
     @objc func moveBullet(){
+        print("moveBullet")
         self.bulletRect = self.bulletRect.offsetBy(dx: 0, dy: -5)
         self.bulletView.frame = self.bulletRect
-        if(self.bulletRect.origin.y < 50){
+        if(self.bulletRect.origin.y < 50){            
+            print("moveBullet: \(self.bulletRect.origin.y)")
             self.bulletTimer?.invalidate()
-            self.bulletTimer=nil
+            self.bulletTimer = nil
             self.bulletView.removeFromSuperview()
         }
     }

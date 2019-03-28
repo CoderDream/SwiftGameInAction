@@ -31,14 +31,15 @@ class PlayerBullet: NSObject {
         bombArray.add(imageRef1.image!)
         bombArray.add(imageRef2.image!)
         
+        self.bulletRect = CGRect(x: bulletStartX, y: playerView.frame.origin.y, width: 8, height: 16)
+        // bulletView yon
+        self.bulletView = UIImageView(frame: bulletRect)
+        self.bulletView.image = imageRef2.image
+        self.gameView.addSubview(self.bulletView)
+        
         self.bulletView.animationImages = bombArray as? [UIImage]
         self.bulletView.animationDuration = 0.3
         self.bulletView.startAnimating()
-        
-        self.bulletRect = CGRect(x: bulletStartX, y: playerView.frame.origin.y, width: 8, height: 16)
-        self.bulletView = UIImageView(frame: bulletRect)
-        self.bulletView.image = imageRef2.image//UIImage(cgImage: imageRef2 as! CGImage) //(CGImage: imageRef2 as! CGImage)
-        self.gameView.addSubview(self.bulletView)
         
         // 移动子弹
         bulletTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(moveBullet), userInfo: nil, repeats: true)

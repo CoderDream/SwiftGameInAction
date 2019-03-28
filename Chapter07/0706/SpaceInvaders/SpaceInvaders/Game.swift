@@ -20,7 +20,7 @@ class GameViewController: UIViewController {
     // 实现飞船的对象
     var playerOne: PlayerObject = PlayerObject()
     // 子弹对象
-    var playerBullet: PlayerBullet = PlayerBullet()
+    //var playerBullet: PlayerBullet = PlayerBullet()
     //var playerView: UIImageView = UIImageView()
     
     var moveTimer: Timer? = Timer()
@@ -75,6 +75,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func fireBtnClick(_ sender: UIButton) {
+        let playerBullet: PlayerBullet = PlayerBullet() // 子弹对象要放在方法里，不能作为类对象，否则子弹会停在屏幕上，而且屏幕外的子弹不会消失
         playerBullet.fireBullet(gameView: self.view, playerView: self.playerView as! UIImageView)
     }
     
