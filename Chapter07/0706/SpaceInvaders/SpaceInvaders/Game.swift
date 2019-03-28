@@ -107,12 +107,17 @@ class GameViewController: UIViewController {
         self.loadingView.frame = self.view.frame
         self.view.addSubview(self.loadingView)
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(closeScreen), userInfo: nil, repeats: false)
+        
+        // 添加敌人
+        self.enemies.initEnemies(gameView: self.view)
     }
     
     // 关闭提示界面
     @objc func closeScreen(){
         // 从主视图中移除视图对象
         self.loadingView.removeFromSuperview()
+        // 移动敌人
+        self.enemies.startTimers()
     }
     func endScreen(){
 //        var alert:UIAlertView=UIAlertView()

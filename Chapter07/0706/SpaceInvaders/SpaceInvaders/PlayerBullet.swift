@@ -50,10 +50,10 @@ class PlayerBullet: NSObject {
         self.bulletRect = self.bulletRect.offsetBy(dx: 0, dy: -5)
         self.bulletView.frame = self.bulletRect
         
-        print("show: \(self.bulletRect.origin.y)")
+        //print("show: \(self.bulletRect.origin.y)")
         // 判断子弹的 y 的位置是否小于 10
         if self.bulletRect.origin.y < 10 {
-            print("remove: \(self.bulletRect.origin.y)")
+            //print("remove: \(self.bulletRect.origin.y)")
             remove()
         }
     }

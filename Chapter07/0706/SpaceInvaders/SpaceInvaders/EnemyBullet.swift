@@ -43,12 +43,12 @@ class EnemyBullet: NSObject {
         // 移动子弹
         bombTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(moveBomb), userInfo: nil, repeats: true)
     }
-    @objc func moveBomb(){
+    @objc func moveBomb() {
         self.bombRect = self.bombRect.offsetBy(dx: 0, dy: 5)
         self.bombView.frame = self.bombRect
-        if(self.bombRect.origin.y>440){
+        if self.bombRect.origin.y > 440 {
             self.bombTimer?.invalidate()
-            self.bombTimer=nil
+            self.bombTimer = nil
             self.bombView.removeFromSuperview()
         }
     }

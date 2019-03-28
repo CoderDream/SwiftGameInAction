@@ -21,7 +21,9 @@ class Enemy: NSObject {
     // 移动敌人
     var enemyTimer: Timer = Timer()
     
+    // 敌人子弹
     var enemyBulletTimer: Timer = Timer()
+    var ememiesBullet: EnemyBullet? = EnemyBullet()
     
     var minXPos: NSInteger = 0
     var maxXPos: NSInteger = 0
@@ -31,9 +33,6 @@ class Enemy: NSObject {
         // 添加敌人
         self.gameView = gameView
         let enemyImage = UIImage(named: "enemy01.png")
-        //let enemyView = UIImageView(image: enemyImage)
-        //enemyView.frame = CGRect(x: 10, y: 10, width: eSize, height: eSize)
-        //self.gameView.addSubview(enemyView)
         
         // 敌人位置
         self.minXPos = 10
@@ -56,29 +55,36 @@ class Enemy: NSObject {
             self.enemyList.add(enemyView)
             self.gameView.addSubview(enemyView)            
         }
-        
+    }
+    
+    func startTimers() {
         self.enemyTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(moveEnemies), userInfo: nil, repeats: true)
-        self.enemyBulletTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(dropBomb), userInfo: nil, repeats: true)
+        self.enemyBulletTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(dropBomb), userInfo: nil, repeats: true)
     }
     
     @objc func moveEnemies(){
-        var enemyView:UIImageView=self.enemyList[0] as! UIImageView
-        if(Int(enemyView.frame.origin.x) <= self.minXPos){
+        var enemyView: UIImageView = self.enemyList[0] as! UIImageView
+        
+        // 判断敌人的 x 的位置是否小于最小的 x 的位置，即 10
+        if Int(enemyView.frame.origin.x) <= self.minXPos {
             goingLeft = false
-            
         }
-        enemyView = self.enemyList[enemyColumns-1] as! UIImageView
-        if(Int(enemyView.frame.origin.x)>=self.maxXPos){
+        
+        enemyView = self.enemyList[enemyColumns - 1] as! UIImageView
+        // 判断敌人的 x 的位置是否大于于最大的 x 的位置，即 365(1920*1080)
+        //print("maxXPos: \(self.maxXPos)")
+        if Int(enemyView.frame.origin.x) >= self.maxXPos {
             goingLeft = true
-            
         }
+        
         for i in 0 ..< self.enemyList.count {
             enemyView = self.enemyList[i] as! UIImageView;
             var xPos: Int = 0
             
             if goingLeft {
                 xPos = Int(enemyView.frame.origin.x) - 3;
-            }else{
+            }
+            else {
                 xPos = Int(enemyView.frame.origin.x) + 3;
             }
             
@@ -88,7 +94,10 @@ class Enemy: NSObject {
     }
     
     @objc func dropBomb(){
-        let newBullet: EnemyBullet = EnemyBullet()
-        newBullet.fireBullet(gameView: self.gameView, enemyList: self.enemyList)
+        //let newBullet: EnemyBullet = EnemyBullet()
+        //newBullet.fireBullet(gameView: self.gameView, enemyList: self.enemyList)
+       // if self.ememiesBullet == nil { // || self.ememiesBullet?.isActive == false {
+            ememiesBullet!.fireBullet(gameView: self.gameView, enemyList: self.enemyList)
+       // }
     }
 }
