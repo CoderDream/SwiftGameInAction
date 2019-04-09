@@ -16,7 +16,7 @@ class EnemyBullet: NSObject {
     var bombTimer: Timer? = nil
     var gameView:UIView = UIView()
     
-    func  fireBullet(gameView: UIView, enemyList: Array<UIImageView>){
+    func fireBullet(gameView: UIView, enemyList: Array<UIImageView>){
         let randEnemy: Int = Int(arc4random()) % enemyList.count
         let enemyView: AnyObject = enemyList[randEnemy] as AnyObject
         self.gameView = gameView
@@ -43,6 +43,8 @@ class EnemyBullet: NSObject {
         // 移动子弹
         bombTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(moveBomb), userInfo: nil, repeats: true)
     }
+    
+    // 向下移动子弹
     @objc func moveBomb() {
         self.bombRect = self.bombRect.offsetBy(dx: 0, dy: 5)
         self.bombView.frame = self.bombRect

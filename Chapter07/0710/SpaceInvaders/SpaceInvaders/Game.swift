@@ -122,9 +122,6 @@ class GameViewController: UIViewController {
         self.loadingView.frame = self.view.frame
         self.view.addSubview(self.loadingView)
         Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(closeScreen), userInfo: nil, repeats: false)
-        
-        // 碰撞检测
-        collisionTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(intersectCheck), userInfo: nil, repeats: true)
     }
     
     // 关闭提示界面
@@ -135,20 +132,25 @@ class GameViewController: UIViewController {
         self.enemies.initEnemies(gameView: self.view)
         // 移动敌人
         self.enemies.startTimers()
+        
+        // 碰撞检测
+        collisionTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(intersectCheck), userInfo: nil, repeats: true)
     }
+    
     var tag: Int = 0
+    
     @objc func intersectCheck() {
         let isConnecting: Bool = self.enemies.ememiesBullet!.bombRect.intersects(self.playerOne.playerRect)
         // 判读敌人的子弹是否击中飞船
         if isConnecting {
-            //Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(endScreen), userInfo: nil, repeats: false)
-            //self.changeState(newState: .RELOADING)
+            Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(endScreen), userInfo: nil, repeats: false)
+            self.changeState(newState: .RELOADING)
         }
         
         if !self.enemies.enemyList.isEmpty {
             for i in 0 ..< 25 {
                 let enemyView: UIImageView = self.enemies.enemyList[i] // as! UIImageView
-                print("enemyView \(enemyView.frame) - \(self.playerOne.playerBullet.bulletRect)")
+                //print("enemyView \(enemyView.frame) - \(self.playerOne.playerBullet.bulletRect)")
                 let isConnecting: Bool = enemyView.frame.intersects(self.playerOne.playerBullet.bulletRect)
                 if isConnecting {
                     self.tag = i
@@ -202,7 +204,6 @@ class GameViewController: UIViewController {
         }
     }
     
-    
     @objc func endScreen() {
         //        var alert:UIAlertView=UIAlertView()
         //        alert.title="游戏结束"
@@ -215,21 +216,29 @@ class GameViewController: UIViewController {
         let title = "游戏结束"
         let message = "是否保存分数"
         let alertController = UIAlertController(title: title,
-                                                message: message, preferredStyle: .alert)
+                                                message: message,
+                                                preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        let okAction = UIAlertAction(title: "好的", style: .default, handler: {
-            action in
+        let okAction = UIAlertAction(title: "好的", style: .default, handler: { action in
             print("点击了确定")
             score.add(self.j)
             let dateFormatter: DateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy//MM//dd HH:mm:ss"
             let d: Date = Date()
             let date: String = dateFormatter.string(from: d as Date)
+            print("date: \(date)")
             time.add(date)
         })
         alertController.addAction(cancelAction)
         alertController.addAction(okAction)
         self.present(alertController, animated: true, completion: nil)
+        
+//        score.add(self.j)
+//        let dateFormatter: DateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "yyyy//MM//dd HH:mm:ss"
+//        let d: Date = Date()
+//        let date: String = dateFormatter.string(from: d as Date)
+//        time.add(date)
         
         self.loadingView.removeFromSuperview()
         self.changeState(newState: .ENDING)

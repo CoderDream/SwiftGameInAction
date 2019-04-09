@@ -66,7 +66,7 @@ class Enemy: NSObject {
     
     func startTimers() {// 0.03
         self.enemyTimer = Timer.scheduledTimer(timeInterval: 0.03, target: self, selector: #selector(moveEnemies), userInfo: nil, repeats: true)
-        //self.enemyBulletTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(dropBomb), userInfo: nil, repeats: true)
+        self.enemyBulletTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(dropBomb), userInfo: nil, repeats: true)
     }
     
     @objc func moveEnemies(){
