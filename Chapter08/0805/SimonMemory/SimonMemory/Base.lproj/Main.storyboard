@@ -76,14 +76,23 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0a-Db-RGZ">
                                 <rect key="frame" x="24" y="54" width="182" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="triggerButtonSound:" destination="1jr-FQ-IJn" eventType="touchUpInside" id="Du3-T2-0sO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QrS-rM-NsB">
                                 <rect key="frame" x="204" y="54" width="182" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="triggerButtonSound:" destination="1jr-FQ-IJn" eventType="touchUpInside" id="U6q-Aq-0mb"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVV-ik-wFQ">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVV-ik-wFQ">
                                 <rect key="frame" x="24" y="236" width="182" height="183"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="triggerButtonSound:" destination="1jr-FQ-IJn" eventType="touchUpInside" id="PhD-w8-QfT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tQ-2w-htJ">
                                 <rect key="frame" x="204" y="236" width="182" height="183"/>
@@ -120,6 +129,7 @@
                         <viewLayoutGuide key="safeArea" id="koM-JT-NG7"/>
                     </view>
                     <connections>
+                        <outlet property="guessLabel" destination="027-ya-3sV" id="dWv-Gz-QFW"/>
                         <outlet property="highlightImageView" destination="a6U-nX-bJz" id="BHl-FG-vU0"/>
                     </connections>
                 </viewController>
